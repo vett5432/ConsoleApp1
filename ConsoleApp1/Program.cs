@@ -11,6 +11,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            double x;
+            while (true)
+            {
+                Console.Write("x= ");
+                string input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("");
+                    continue;
+                }
 
                 if (!double.TryParse(input, NumberStyles.Float | NumberStyles.AllowThousands, CultureInfo.InvariantCulture, out x))
                 {
